@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d2928">
+    <meta name="description" content="Find a business on Google Maps and copy its Place ID for your Google review link.">
+    <title>Place ID Finder · IMAI Review Studio</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/index-BE0XItjW.css">
+    <link rel="stylesheet" href="./place-id-finder.css">
+    <script src="./config.js"></script>
+    <script type="module" src="./place-id-finder.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./"><span>IR</span><div>IMAI <strong>Review Studio</strong></div></a>
+      <a class="button secondary back-link" href="./">← Review link generator</a>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">GOOGLE MAPS TOOLS</span>
+        <h1>Find your <em>Place ID.</em></h1>
+        <p>Search for your business, choose the correct location, then copy its unique Google Place ID.</p>
+      </section>
+      <section class="workspace finder-panel" aria-labelledby="finder-title">
+        <div class="search-block">
+          <div class="section-heading"><span class="step">1</span><div><h2 id="finder-title">Find your business</h2><p>Check the name and address before using a result.</p></div></div>
+          <p id="finder-status" role="status" aria-live="polite">Preparing Place ID Finder…</p>
+          <div id="search-container" hidden><label id="search-label">Business name or address</label><div id="autocomplete"></div></div>
+          <div id="setup-state" class="finder-setup" hidden>
+            <strong>Live Place ID search is not enabled yet</strong>
+            <p>Google Maps search will be available once this site's Google Maps connection is set up. In the meantime, find your business using Google's official Place ID Finder, copy the Place ID, then return to the review link generator.</p>
+            <div class="actions"><a class="button primary" href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder" target="_blank" rel="noopener noreferrer">Open Google's Place ID Finder ↗</a><a class="button secondary" href="./">Enter a Place ID manually</a></div>
+          </div>
+        </div>
+        <div id="finder-map" aria-label="Business location map" hidden></div>
+      </section>
+      <section id="place-result" class="result" aria-labelledby="result-name" hidden>
+        <span class="status">Selected on Google Maps</span>
+        <h2 id="result-name"></h2><p id="result-address"></p>
+        <label class="id-label" for="result-id">Place ID</label>
+        <div class="copy-field"><input id="result-id" readonly><button id="copy-id" type="button">Copy Place ID</button></div>
+        <p id="copy-status" role="status" aria-live="polite"></p>
+        <div class="actions"><a id="view-place" class="button secondary" target="_blank" rel="noopener noreferrer">Check on Google Maps ↗</a><a class="button primary" href="./">Review link generator →</a></div>
+        <p class="finder-help">Copy the ID, return to the generator and choose “Already have a Place ID? Enter it manually”.</p>
+      </section>
+      <p class="finder-help">Based on <a href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder" target="_blank" rel="noopener noreferrer">Google's official Place ID Finder example</a>. Search is powered by Google Maps. Confirm the business address before sharing a review link.</p>
+    </main>
+    <footer><span>IMAI Review Studio</span><p>Google and Google Maps are trademarks of Google LLC. This tool is not affiliated with Google.</p></footer>
+  </body>
+</html>
