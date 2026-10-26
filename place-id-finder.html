@@ -28,10 +28,10 @@
           <div class="section-heading"><span class="step">1</span><div><h2 id="finder-title">Find your business</h2><p>Check the name and address before using a result.</p></div></div>
           <p id="finder-status" role="status" aria-live="polite">Preparing Place ID Finder…</p>
           <div id="search-container" hidden><label id="search-label">Business name or address</label><div id="autocomplete"></div></div>
-          <div id="setup-state" class="finder-setup" hidden>
-            <strong>Live Place ID search is not enabled yet</strong>
-            <p>Google Maps search will be available once this site's Google Maps connection is set up. In the meantime, find your business using Google's official Place ID Finder, copy the Place ID, then return to the review link generator.</p>
-            <div class="actions"><a class="button primary" href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder" target="_blank" rel="noopener noreferrer">Open Google's Place ID Finder ↗</a><a class="button secondary" href="./">Enter a Place ID manually</a></div>
+          <div id="setup-state" hidden>
+            <iframe src="https://maps-docs-team.web.app/samples/places-placeid-finder/dist/" title="Google Maps Place ID Finder — search business name" style="display:block;width:100%;height:480px;border:0" allowfullscreen></iframe>
+            <p class="finder-help">Type your business name in the map search bar. Select the correct result and copy its Place ID. This interactive finder is provided and hosted by Google.</p>
+            <a class="button secondary" href="./#place-id-finder">Use the review link generator →</a>
           </div>
         </div>
         <div id="finder-map" aria-label="Business location map" hidden></div>
@@ -45,7 +45,7 @@
         <div class="actions"><a id="view-place" class="button secondary" target="_blank" rel="noopener noreferrer">Check on Google Maps ↗</a><a class="button primary" href="./">Review link generator →</a></div>
         <p class="finder-help">Copy the ID, return to the generator and choose “Already have a Place ID? Enter it manually”.</p>
       </section>
-      <p class="finder-help">Based on <a href="https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder" target="_blank" rel="noopener noreferrer">Google's official Place ID Finder example</a>. Search is powered by Google Maps. Confirm the business address before sharing a review link.</p>
+
     </main>
     <footer><span>IMAI Review Studio</span><p>Google and Google Maps are trademarks of Google LLC. This tool is not affiliated with Google.</p></footer>
   </body>
